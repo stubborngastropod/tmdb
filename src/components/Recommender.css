@@ -1,0 +1,18 @@
+.Recommender > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+.Recommender > li {
+    text-align: center;
+  }
+  
+.Recommender > ul > li > img {
+    width: 150px;
+    border-radius: 10px;
+  }
+  
