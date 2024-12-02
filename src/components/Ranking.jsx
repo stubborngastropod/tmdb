@@ -11,8 +11,7 @@ const Ranking = () => {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMDZlNzJmYjkwNGExMTkyOGUzM2JjZmJlNmViNTU5YSIsIm5iZiI6MTY3NDc3OTQ5OS40MTQsInN1YiI6IjYzZDMxYjZiMDMxYTFkMDBjMDk1NGRiNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fcum_1eJr7IJUKl_aAcsrE9JAe3efw37D3oDiOrLwPQ",
+      Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_KEY}`,
     },
   };
 
