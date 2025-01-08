@@ -12,12 +12,16 @@ const Recommender = ({ candidates, onDelete, onRefresh }) => {
   };
 
   if (candidates.length < 1) {
-    return <div>아래 목록에서 영화를 터치하여 추가하세요</div>;
+    return (
+      <div>
+        <div>담은 영화가 없습니다.</div>
+      </div>
+    );
   }
 
   return (
     <div className="Recommender">
-      <h2>후보</h2>
+      <h2>담은 영화</h2>
       <ul>
         {candidates.map((candidate) => (
           <li key={candidate.id}>
@@ -28,11 +32,14 @@ const Recommender = ({ candidates, onDelete, onRefresh }) => {
             />
             <h2>{candidate.title}</h2>
             <p>평점: {candidate.vote_average}</p>
+            <button alt={candidate.id} onClick={onDelete}>
+              목록에서 지우기
+            </button>
           </li>
         ))}
       </ul>
-      <button onClick={pickMovie}>영화뽑기</button>
-      <button onClick={onRefresh}>목록 초기화</button>
+      <button onClick={pickMovie}>영화 추천받기</button>
+      <button onClick={onRefresh}>목록 비우기</button>
     </div>
   );
 };
